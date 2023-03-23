@@ -1,0 +1,128 @@
+<!Doctype HTML>
+<html>
+    <head>
+      <style>
+        label{
+            background-color: rgb(150, 152, 246);
+        }
+        input[type=number]{
+            background-color: antiquewhite;
+        }
+        input[type=text]{
+            background-color:rgb(246, 234, 219);
+        }
+        input[type=button]{
+            background-color:rgb(247, 27, 174);
+        }
+        body{
+            background-color: rgb(150, 152, 246);
+        }
+      </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+          alert("Bine ati venit !!");
+            function zodiac()
+        {
+                var birthmonth = document.getElementById("month").value;
+                 var birthday = document.getElementById("day").value;
+                 var imagine=document.getElementById('img');
+                var result = " "; 
+               const r1=new RegExp('1[0-2]|[1-9]');
+                const r2=new RegExp('([1-9]|[12][0-9]|3[01])');
+                
+                if(birthmonth >12 && birthday >31){
+                  alert("Verificati datele !");
+                 }
+       else  if(birthmonth >12)
+         {
+          alert('Verificati luna!');
+         }
+         else  if(birthday>31){
+                  alert("Veificati ziua!")
+         }
+         
+   else if(birthmonth.match(r1) && birthday.match(r2))
+   {
+
+             if (birthmonth == 1 && birthday >= 20 && birthmonth == 2 && birthday <= 18)
+                  {
+                      result = ("Varsator");       
+                      img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Aquarius_symbol_%28bold%29.svg/800px-Aquarius_symbol_%28bold%29.svg.png";        
+                  }
+              
+                  if (birthmonth == 2 && birthday >= 19 && birthmonth == 3 && birthday <= 20){
+                     result = ("Pesti");
+                     img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Pisces_symbol_%28bold%29.svg/1200px-Pisces_symbol_%28bold%29.svg.png";                  
+        }
+                  
+                 if (birthmonth == 3 && birthday >= 21 && birthmonth == 4 && birthday <= 19){
+                     result = ("Berbec");
+                     img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Aries_symbol_%28bold%29.svg/1200px-Aries_symbol_%28bold%29.svg.png";
+                                    }
+                
+                 if (birthmonth == 4 && birthday >= 20 && birthmonth == 5 && birthday <= 20){
+                      result = ("Taur");
+                      img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Taurus_symbol_%28bold%29.svg/640px-Taurus_symbol_%28bold%29.svg.png";
+                      }
+                
+                if (birthmonth == 5 && birthday >= 21 && birthmonth == 6 && birthday <= 20
+                   ){
+                      result = ("Gemeni");
+                    img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Gemini_symbol_%28bold%29.svg/1200px-Gemini_symbol_%28bold%29.svg.png";
+                  }
+                
+            if (birthmonth == 6 && birthday >= 21 && birthmonth == 7 && birthday <= 22){
+                      result = ("Rac");
+                      img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Cancer_symbol_%28bold%29.svg/1200px-Cancer_symbol_%28bold%29.svg.png";
+                  }
+               if (birthmonth == 7 && birthday >= 23 && birthmonth == 8 && birthday <= 22){
+                      result = ("Leu");
+                   img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Leo_symbol_%28bold%29.svg/800px-Leo_symbol_%28bold%29.svg.png";
+                  }
+                  if (birthmonth == 8 && birthday >= 23 && birthmonth == 9 && birthday <= 22){
+                      result = ("Fecioara");
+                      img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Virgo_symbol_%28bold%29.svg/640px-Virgo_symbol_%28bold%29.svg.png";
+                    }
+                    if (birthmonth == 9 && birthday >= 23 && birthmonth == 10 && birthday <= 22){
+                        result = ("Balanta");
+                        img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Libra_symbol_%28bold%29.svg/1200px-Libra_symbol_%28bold%29.svg.png";
+                        }
+                      if (birthmonth == 10 && birthday >= 23 && birthmonth == 11 && birthday <= 21){
+                         result = ("Scorpion");
+                         img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Scorpius_symbol_%28bold%29.svg/800px-Scorpius_symbol_%28bold%29.svg.png";
+                        }
+                      if (birthmonth == 11 && birthday >= 22 && birthmonth == 12 && birthday <= 21){
+                          result = ("Sagetator");
+                          img.src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Sagittarius_symbol_%28bold%29.svg/1200px-Sagittarius_symbol_%28bold%29.svg.png";
+                        }
+                    
+                    if(birthmonth == 12 && birthday >= 22 && birthmonth == 1 && birthday <= 19){
+                   
+                          result = ("Capricorn");
+                          img.src="https://symbolikon.com/wp-content/uploads/edd/2019/09/astrology-capricorn-bold-400w.png";
+                    }
+                    document.getElementById("zodia").value= result;
+                }}
+                
+            
+                function myFunction() {
+                  return "";
+                }
+                 
+    </script>
+        </head>
+      
+          <hr>
+          <h3 align="center">Afla zodia:</h3>
+          <hr>
+          <label for="month">Luna :</label>
+        <input type="number" id="month">
+        <label for="day">Data :</label>
+        <input type="number" id="day"> <br><br>
+        <label for="zodia">Zodia :</label>
+        <input type="text" id="zodia" readonly >
+        <input type="button" value="Determina zodia" onclick="zodiac()"> <br><br>
+        
+       <a href="1.html"> <image id="img" height="100" width="150" src="https://cdn.britannica.com/72/223172-131-C3F72804/astrology-horoscope-circle.jpg"></image></a>
+        </body>
+        </html>
